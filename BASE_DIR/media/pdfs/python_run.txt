@@ -1,0 +1,31 @@
+to run python steps
+1- C:\Users\yash>pythonenv\scripts\activate
+2- C:\Users\yash cd ..
+3 - C:\Users\cd ..
+4 - C:\Users\cd Django
+5 - C:\Django>cd my_django_project
+
+Python Run - python manage.py runserver
+port change - python manage.py runserver 8081
+create applicaiton - python manage.py startapp application_name
+---------------------------------------------------------------
+
+Admin Interface
+
+1 - python manage.py makemigrations
+2 - python manage.py migrate
+3 - python manage.py createsuperuser
+4 - And then create username and password
+
+How to change login Title and Heading
+1 - admin.site.site_header="My Project"
+2 - admin.site.site_title="My Project Admin Panel"
+3 - admin.site.index_title="Welcome to Admin Panel"
+
+How to installing admin interface
+1 - pip install django-admin-interface
+
+
+Add the file in settings.py
+1- admin_interface
+2 - colorfield

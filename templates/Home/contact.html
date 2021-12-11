@@ -1,0 +1,81 @@
+{% extends "Home/base.html" %}
+
+{% block content %}
+{% load static %}
+<section class="Innerbanner contact">
+  <article class="Innerbannerheading fadeInUp">
+    <h2>Contact Us</h2>
+    <h5>the awesome spices</h5>
+  </article>
+</section>
+<main class="mainContainer">
+  <section class="FeedbackSection">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="customHeading text-center">
+          <h3>our contact <span>info</span></h3>
+          <!-- <table class="table table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Comment</th>
+              </tr>
+            </thead>
+            <tbody>
+            {% for data in contact_record %}
+              <tr>
+                <th scope="row">{{data.id}}</th>
+                <td>{{data.name}}</td>
+                <td>{{data.email}}</td>
+                <td>{{data.comment}}</td>
+              </tr>
+              {% endfor %}
+              
+            
+            </tbody>
+          </table> -->
+        
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <form action="/contact/" method="post">
+          {% csrf_token %}
+          <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Name</label>
+                <input name="name" class="form-control" id="exampleFormControlInput1" placeholder="Enter Name">
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Email address</label>
+                <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Email">
+            </div>
+          </div>
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Hobies</label>
+                <textarea class="form-control" name="comment" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+          </div>
+          <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+            
+            <button type="submit" class="btn btn-primary Defaultbtn">Submit</button>
+          </div>
+           
+      </form>
+
+        
+      </div>
+    </div>
+     
+  </div>
+   
+</main>
+ 
+{% endblock %}

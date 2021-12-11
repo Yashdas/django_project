@@ -1,0 +1,44 @@
+ 
+{% extends "Home/base.html" %}
+
+{% block content %}
+<section class="Innerbanner contact">
+    <article class="Innerbannerheading fadeInUp">
+      <h2>Upload Books</h2>
+       
+    </article>
+  </section>
+  <main class="mainContainer">
+    <section class="FeedbackSection">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="customHeading text-center">
+            <h3>Upload Book</h3>
+             
+          </div>
+        </div>
+      </div>
+       
+         
+          <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            
+ 
+            {{book_form.as_p}}
+            
+          <div class="form-group">
+            <button type="submit" class="btn btn-default ">
+              Submit
+            </button>
+             
+        </form>
+  
+          
+        
+       
+       
+    </div>
+     
+  </main>
+{% endblock %}

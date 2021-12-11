@@ -1,0 +1,57 @@
+{% extends "Home/base.html" %}
+
+{% block content %}
+{% load static %}
+<section class="Innerbanner contact">
+  <article class="Innerbannerheading fadeInUp">
+    <h2>Book List</h2>
+    
+  </article>
+</section>
+<main class="mainContainer">
+  <section class="FeedbackSection">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="customHeading">
+          <h3>Book List</h3>
+          <table class="table table-striped bg-dark">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Title</th>
+                <th scope="col">Author</th>
+                <th scope="col">File Name</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+            {% for data in book_record %}
+              <tr>
+                <th scope="row">{{data.id}}</th>
+                <td>{{data.title}}</td>
+                <td>{{data.author}}</td>
+                <td><a href="{{data.pdf.url}}"><input type="submit" class="btn btn-success" value="Show File"></a></td>
+                <td>
+                  <form method="POST" action="{% url 'delete_book' data.pk %}">
+                    {% csrf_token %}
+                  <input type="submit" class="btn btn-danger" value="Delete">
+                </form>
+                </td>
+              </tr>
+              {% endfor %}
+              
+            
+            </tbody>
+          </table>
+        
+        </div>
+      </div>
+    </div>
+    
+     
+  </div>
+   
+</main>
+ 
+{% endblock %}

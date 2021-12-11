@@ -1,0 +1,52 @@
+{% extends "Home/base.html" %}
+
+{% block content %}
+{% load static %}
+<section class="Innerbanner contact">
+  <article class="Innerbannerheading fadeInUp">
+    <h2>Send Email</h2>
+    
+  </article>
+</section>
+<main class="mainContainer">
+  <section class="FeedbackSection">
+  <div class="container">
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 40px;">
+            <form action="/send_email/" method="post">
+              {% csrf_token %}
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input name="name" class="form-control" id="name" placeholder="Enter Name">
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <div class="form-group">
+                    <label for="email_id">Email address</label>
+                    <input type="email" name="email" class="form-control" id="email_id" placeholder="Receiver Email">
+                </div>
+              </div>
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Message</label>
+                    <textarea class="form-control" name="comment" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+              </div>
+              <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                
+                <button type="submit" class="btn btn-primary Defaultbtn">Send Mail</button>
+              </div>
+               
+          </form>
+    
+            
+          </div>
+    </div>
+    
+     
+  </div>
+   
+</main>
+ 
+{% endblock %}

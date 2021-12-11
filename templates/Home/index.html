@@ -1,0 +1,92 @@
+
+{% extends "Home/base.html" %}
+
+{% block content %}
+{% load static %}
+<section class="homeSlider">
+  <div class="container">
+    <div class="row">
+      <div class="headingslider">
+        <div class="col-md-12 col-sm-12 col-xs-12"> <span class="topheading fadeInLeft "> the symbol of purity & quality </span>
+          <h2 class="titleheading fadeInRight"> <span>it's all about</span> <br />
+            good taste </h2>
+        </div>
+      </div>
+      <section class="col-md-12 col-sm-12 col-xs-12 productslider">
+        <div class="row">
+          <div class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
+            <article class="masalaboul bounceLeft delay1 bowl-1">
+              <figure class="productimg left"> <img src="{% static 'images/achaar-bowl.png' %}" class="productBowl" /> <img class="productbox" src="{% static 'images/achaar-front.jpg ' %}" /> </figure>
+              <div class="producttitle right"> <span> Achar Masala </span> </div>
+            </article>
+          </div>
+          <div class="col-lg-6 col-md-4 col-sm-4 hidden-xs">
+            <figure class="text-center delay6"> <img src="{% static 'images/slider-bowl-center.png' %}" class="fadeInUp "> 
+              <!-- <img class="productbox" src="images/achar-masala-250x250.jpg" /> --> 
+            </figure>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
+            <article class="masalaboul bounceRight delay2 bowl-2">
+              <figure class="productimg right"> <img src="{% static 'images/aloo-bowl.png' %}" class="productBowl" /> <img class="productbox" src="{% static 'images/aloo-front.jpg ' %}" /> </figure>
+              <div class="producttitle left"> <span> Aloo Masala </span> </div>
+            </article>
+          </div>
+        </div>
+        <div class="row secoundslide">
+          <div class="col-lg-6 col-md-6 col-xs-6 text-right">
+            <article class="masalaboul delay3 bounceLeft bowl-3">
+              <figure class="productimg left"> <img src="{% static 'images/chana-bowl.png' %}" class="productBowl" /> <img class="productbox" src="{% static 'images/chana-front.jpg ' %}" /> </figure>
+              <div class="producttitle right"> <span> CHANA MASALA </span> </div>
+            </article>
+          </div>
+          <div class="col-lg-6 col-md-6 col-xs-6">
+            <article class="masalaboul bounceRight delay4 bowl-4">
+              <figure class="productimg right"> <img src="{% static 'images/chowmin-bowl.png' %}" class="productBowl" /> <img class="productbox" src="{% static 'images/chowmin-front.jpg' %}" /> </figure>
+              <div class="producttitle left"> <span> chowmein masala </span> </div>
+            </article>
+          </div>
+        </div>
+        <div class="row thirdslide">
+          <div class="col-md-3 col-sm-4 col-xs-12 text-right">
+            <article class="masalaboul bounceLeft delay7 bowl-5">
+              <figure class="productimg left"> <img class="productBowl" src="{% static 'images/meethi_chutney-bowl.png' %}" /> <img class="productbox" src="{% static 'images/methichutney-front.jpg' %}" /> </figure>
+              <div class="producttitle right"> <span> Methi Chutney</span> </div>
+            </article>
+          </div>
+           <div class="col-md-3 col-sm-4 col-xs-12 right text-left">
+            <article class="masalaboul bounceRight delay8 bowl-6">
+              <figure class="productimg right"> <img src="{% static 'images/pudina-bowl.png' %}" class="productBowl" /> <img class="productbox" src="{% static 'images/pudina-front.jpg' %}" /> </figure>
+              <div class="producttitle left"> <span> Pudina-chutney </span> </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="row">
+      <section class="advertisesection">
+        <div class="col-lg-10 col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
+          <div class="row">
+            <div class="leftadvertise col-md-3 col-xs-12">
+              <h4>pcm Masale<br>
+                <span>available<br>
+                at your</span> <br>
+                home</h4>
+            </div>
+            <div class="rightadvertise col-md-9 col-xs-12">
+              <div class="row">
+                <div class="col-lg-7 col-md-7 col-xs-12">
+                  <h2> call us at our 24 hours </h2>
+                  <span class="number"> <i class="fa fa-whatsapp"></i> +91 9829 021 464 </span> </div>
+                <div class="col-lg-5 col-md-5 col-xs-12"> <span class="lineseprator"> or </span>
+                  <div class="order"> <a href="contact-us.html" target="_blank" class="Defaultbtn"> Contact us </a> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
